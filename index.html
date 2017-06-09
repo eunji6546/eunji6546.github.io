@@ -11,7 +11,7 @@
 	<link href="./lightbox/ekko-lightbox.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
     </head>
-    <body>
+    <body onscroll="hideOptions()">
         <div class="container text-center">
             <div class="col-sm-4" >
                 <div class='logo'><div id="bigger">AnimalSearch </div>    
@@ -20,13 +20,13 @@
             </div>
 
             <div class="col-sm-8" style="text-align:left; margin-top : 20px; vertical-align:middle; padding-left:60px; padding-top:10px; padding-bottom:40px">
-              <input type="text" id="txtSearchTerm" size="31%" style="line-height:43px; margin:30 auto;margin-top:30px;" />
+              <input type="text" id="txtSearchTerm" size="28%" style="line-height:43px; margin:30 auto;margin-top:30px;" />
               <input type="submit" value="Search" id="btnSearch" />
         
             </div>
         </div>
 
-        <div class="container options">
+        <div class="container" id="options">
             <div class="navigation">
                 <div class="row">
                     <div class="col-sm-4"></div>
@@ -54,7 +54,6 @@
             </div>
             <div class="animal-favorites">
                 <div class="row" id="animals">
-                    <div class="col-sm-1"></div>
                     <div class="col-sm-1">
                         <div class="animalimage" id="animal1">
                             <img src="images/dog.png" alt="dog">    
@@ -105,7 +104,16 @@
                             <img src="images/panda.png" alt="panda">    
                         </div>        
                     </div>
-                    <div class="col-sm-1"></div>
+                    <div class="col-sm-1">
+                        <div class="animalimage" id="animal11">
+                            <img src="images/bird.svg" alt="bird">    
+                        </div>  
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="animalimage" id="animal12">
+                            <img src="images/fish.svg" alt="fish">    
+                        </div>  
+                    </div>
                 </div>            
             </div>
 
@@ -226,7 +234,12 @@
                           </svg>   
                         </div> 
                     </div>        
-                    <div class="col-sm-1"></div>
+                    <div class="col-sm-1">
+                        <div class="color" title="yellow" id="color9">
+                          <svg width="90" height="90">
+                            <circle cx="40" cy="40" r="40" style="fill:rgb(255, 255, 0);" />
+                          </svg>   
+                        </div> 
                     </div> 
                 </div>
             </div>
@@ -234,6 +247,23 @@
             
         <div class="container results">
           <div id="output">
+              <div class="row">
+                <div id="row0" class="col-md-2 col-md-offset-1">
+
+                </div>
+                <div id="row1" class="col-md-2">
+
+                </div>
+                <div id="row2" class="col-md-2">
+
+                </div>
+                <div id="row3" class="col-md-2">
+
+                </div>
+                <div id="row4" class="col-md-2">
+
+                </div>
+              </div>
             
             
           </div>
