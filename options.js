@@ -11,7 +11,9 @@ var op_color_hov = 0;
 var op_type_hov = 0;
 
 var cartoonClicked = false;
-var hovering_color = "#99d066";
+// var hovering_color = "#99d066";
+
+var colorValue = "#76d275"
 
 
 $('#option-animal').hover(function() {
@@ -129,7 +131,7 @@ for (i = 0; i < 12; i++) {
 
 			}
 			this.className = "animalimageselected";
-			this.style.backgroundColor=hovering_color;
+			this.style.backgroundColor=colorValue;
 			setFavorite($(this).find('img').map(function() { return this.alt; }).get().toString());                          
                         Search();
 		}
@@ -158,7 +160,7 @@ for (i = 0; i < 10; i++) {
 				document.getElementById('place' + (j+1)).className = 'place-image';
 			}
 			this.className = "place-imageselected";
-			this.style.backgroundColor=hovering_color;
+			this.style.backgroundColor=colorValue;
 			setPlace($(this).find('img').map(function() { return this.alt; }).get().toString());  
                         Search();
 		}
@@ -189,7 +191,7 @@ for (i = 0; i < 9; i++) {
 				document.getElementById('color' + (j+1)).className = 'color';
 			}
 			this.className = "colorselected";
-			this.style.backgroundColor=hovering_color;
+			this.style.backgroundColor=colorValue;
 			setColor($(this).attr("title").toString());
                         Search();
 		}
@@ -235,7 +237,7 @@ for (i = 0; i < 2; i++) {
 				document.getElementById('animal-type' + (j+1)).className = 'animal-type';
 			}
 			this.className = "animal-typeselected";
-			this.style.backgroundColor=hovering_color;
+			this.style.backgroundColor=colorValue;
                         setType($(this).find('img').map(function() { return this.alt; }).get().toString());    
                         Search();                       
 		}
@@ -250,7 +252,7 @@ for (i = 0; i < 2; i++) {
  	$('#animal' + (i + 1)).hover(
 	 	function() {
 	 		if (this.className === 'animalimage') {
-	 			this.style.backgroundColor=hovering_color; // this makes it rgb(0, 206, 0) already, before clicking
+	 			this.style.backgroundColor=colorValue; // this makes it rgb(0, 206, 0) already, before clicking
 	 		}
 	 	 }, function() {
 	 	 	// not selected
@@ -265,7 +267,7 @@ for (i = 0; i < 2; i++) {
  	$('#color' + (i + 1)).hover(
 	 	function() {
 	 		if (this.className === 'color') {
-	 			this.style.backgroundColor=hovering_color; // this makes it rgb(0, 206, 0) already, before clicking
+	 			this.style.backgroundColor=colorValue; // this makes it rgb(0, 206, 0) already, before clicking
 	 		}
 	 	 }, function() {
 	 	 	// not selected
@@ -280,7 +282,7 @@ for (i = 0; i < 2; i++) {
  	$('#place' + (i + 1)).hover(
 	 	function() {
 	 		if (this.className === 'place-image') {
-	 			this.style.backgroundColor=hovering_color; // this makes it rgb(0, 206, 0) already, before clicking
+	 			this.style.backgroundColor=colorValue; // this makes it rgb(0, 206, 0) already, before clicking
 	 		}
 	 	 }, function() {
 	 	 	// not selected
@@ -292,10 +294,12 @@ for (i = 0; i < 2; i++) {
  }
  
  function hideOptions(){
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        $("#options").hide();
+    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+        $("#options").hide("slow");
+       
     } else {
-        $("#options").show();
+       $("#options").show("slow");
+       
     }
  }
  
